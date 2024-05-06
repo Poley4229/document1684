@@ -30,15 +30,21 @@
         height: auto;
         border-radius: 10px;
         display: none;
+        margin-bottom: 20px;
+    }
+    #message {
+        color: white;
+        font-size: 20px;
+        display: none;
     }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <input type="text" id="inputBox" placeholder="Enter password to connect to servers">
+    <input type="text" id="inputBox" placeholder="Enter password the connect to server">
     <img src="document.png" id="displayImage">
-    <p1>text</p1>
+    <div id="message">Access Granted! Welcome!</div>
 </div>
 
 <script>
@@ -46,6 +52,7 @@
         if (event.key === "Enter") {
             if (this.value.trim() === "poley65") {
                 document.getElementById("displayImage").style.display = "block";
+                document.getElementById("message").style.display = "block";
             }
         }
     });
