@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fancy Website</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        text-align: center;
+    }
+    input {
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+        margin-bottom: 20px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <input type="text" id="inputBox" placeholder="Enter 'poley65'">
+    <img src="document.png" id="displayImage">
+</div>
+
+<script>
+    document.getElementById("inputBox").addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            if (this.value.trim() === "poley65") {
+                document.getElementById("displayImage").style.display = "block";
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
