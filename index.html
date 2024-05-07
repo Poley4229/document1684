@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Documents</title>
+<title>Fancy Website</title>
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: white;
+        background-color: #f0f0f0;
         margin: 0;
         padding: 0;
         display: flex;
@@ -23,7 +23,7 @@
         font-size: 18px;
         border-radius: 5px;
         border: 2px solid #ccc;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
     img {
         max-width: 100%;
@@ -42,15 +42,18 @@
 <body>
 
 <div class="container">
-    <input type="text" id="inputBox" placeholder="Enter password the connect to server">
+    <input type="text" id="inputBox" placeholder="Enter password to connect to the server">
     <img src="document.png" id="displayImage">
-    <div id="message">well done you found your way here</div>
+    <div id="message">Access Granted! Welcome!</div>
 </div>
 
 <script>
+    // Obfuscated password
+    var password = atob("cG9sYXI2NQ=="); // Decoded from hexadecimal representation of "poley65"
+
     document.getElementById("inputBox").addEventListener("keyup", function(event) {
         if (event.key === "Enter") {
-            if (this.value.trim() === "polar65") {
+            if (this.value.trim() === password) {
                 document.getElementById("displayImage").style.display = "block";
                 document.getElementById("message").style.display = "block";
             }
